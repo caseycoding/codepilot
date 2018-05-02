@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  ui:
+    container_name: codepilot-ui
+    image: "273325000860.dkr.ecr.us-west-2.amazonaws.com/codepilot:ui-latest"
+    depends_on:
+      - db
+    networks: 
+      - codepilot
+    volumes:
+      - ../ui/my-app:/code
+    working_dir: /code
+    entrypoint: yarn start
+    ports:
+      - "3000:3000"
+
+  db:
+    container_name: codepilot-db
+    image: "273325000860.dkr.ecr.us-west-2.amazonaws.com/codepilot:db-latest"
+    networks: 
+      - codepilot
+    ports:
+      - "5432:5432"
+
+networks:
+  codepilot:
