@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  db:
+    container_name: codepilot-db
+    image: "273325000860.dkr.ecr.us-west-2.amazonaws.com/codepilot:db-latest"
+    networks: 
+      - codepilot
+    ports:
+      - "5432:5432"
+
+networks:
+  codepilot:
