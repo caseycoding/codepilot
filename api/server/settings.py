@@ -1,0 +1,12 @@
+DOMAIN = {
+    "donuts": {}
+}
+
+MONGO_HOST = 'db'
+MONGO_PORT = 27017
+
+RESOURCE_METHODS = ["GET", "POST", "DELETE"]
+
+ALLOW_UNKNOWN = True
+
+DEBUG = True

@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  api:
+    container_name: eve-api
+    image: "273325000860.dkr.ecr.us-west-2.amazonaws.com/casey-demo:api-latest"
+    volumes:
+      - ../api/:/code
+    working_dir: /code
+    entrypoint: sh /code/start.sh
+    ports:
+      - "5000:5000"
+    networks:
+      - casey
+
+  db:
+    image: mongo
+    networks:
+      - casey
+
+
+networks:
+  casey:

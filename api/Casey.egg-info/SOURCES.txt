@@ -1,0 +1,6 @@
+setup.py
+Casey.egg-info/PKG-INFO
+Casey.egg-info/SOURCES.txt
+Casey.egg-info/dependency_links.txt
+Casey.egg-info/entry_points.txt
+Casey.egg-info/top_level.txt
